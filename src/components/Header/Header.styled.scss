@@ -1,3 +1,33 @@
-.hola {
-  background-color: red;
+@use '../../assets/variables.scss' as *;
+
+.header {
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 84px;
+  width: 100%;
+  padding: 16px;
+  background-color: $primary;
+
+  &__img-container{
+    margin: 0;
+  }
+
+  &__favorite {
+    display: flex;
+    background-color: transparent;
+    border: none;
+
+  }
+
+  &__favorite-number {
+    color: $light;
+    margin-left: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
 }

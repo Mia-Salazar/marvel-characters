@@ -1,8 +1,12 @@
 .transformation-list {
   display: flex;
   list-style-type: none;
-  overflow: scroll;
+  overflow-x: scroll;
 
   margin: 0;
   padding: 0;
+
+  @media (min-width: 1100px) {
+    padding-left: 32px;
+  }
 }

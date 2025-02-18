@@ -5,16 +5,9 @@ import FavoriteButton from '../FavoriteButton/FavoriteButton';
 
 import './Card.styled.scss';
 
-const Types = {
-  big: 'h1',
-  medium: 'h2',
-};
-
-const Card = ({ name, description, image, id, isSingle, isList }) => {
-  const HeadingType = isSingle ? 'h1' : 'h2';
-
+const Card = ({ name, description, image, id, isList }) => {
   return (
-    <article className={isSingle ? 'card card--is-single' : 'card'}>
+    <article className="card">
       <Link to={`/characters/${id}`} className="card__button">
         <figure className="card__container-img">
           <img alt="" src={image} className="card__img" />
@@ -23,7 +16,7 @@ const Card = ({ name, description, image, id, isSingle, isList }) => {
 
       <div className="card__name-container">
         <div className="card__name-header">
-          <HeadingType className="card__name">{name}</HeadingType>
+          <h2 className="card__name">{name}</h2>
           <FavoriteButton isList={isList} />
         </div>
         {description && <p className="card__description">{description}</p>}

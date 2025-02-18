@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { findCharacter } from '../../services/character';
-import { Card, TransformationList } from '../../components';
+import { DetailCard, TransformationList } from '../../components';
 
 import './Detail.styled.scss';
 
@@ -21,10 +21,11 @@ const Detail = () => {
 
   return (
     <main className="detail">
-      <Card
+      <DetailCard
         image={character.image}
         name={character.name}
         description={character.description}
+        id={character.id}
         isSingle
       />
       <section className="detail__container">

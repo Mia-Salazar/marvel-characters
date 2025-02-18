@@ -4,27 +4,6 @@
   height: 245.97px;
   width: 172.5px;
 
-  &--is-single {
-    width: 100%;
-    height: unset;
-
-    .card__button {
-      height: 397.88px;
-    }
-
-    .card__name {
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 37.5px;
-    }
-
-    .card__name-container {
-      height: unset;
-      padding: 16px 24px 48px 24px;
-      flex-direction: column;
-    }
-  }
-
   &__name-header {
     width: 100%;
     display: flex;
@@ -92,7 +71,6 @@
   }
 
   &__name {
-    max-width: 0;
     color: $light;
     font-weight: 400;
     font-size: 14px;

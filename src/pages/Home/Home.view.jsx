@@ -1,10 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
 
-const Header = () => {
+import { useSearchCharacterQuery } from '../../services/hooks/character';
+
+const Home = () => {
   const [count, setCount] = useState(0);
+
+  const characterQuery = useSearchCharacterQuery();
 
   return <main>Hola</main>;
 };
 
-export default Header;
+export default Home;

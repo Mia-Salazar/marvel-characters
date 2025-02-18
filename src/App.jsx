@@ -18,7 +18,11 @@ const routes = [
     children: [
       {
         index: true,
-        element: <Navigate to={'/character'} />,
+        element: <Navigate to={'/characters'} />,
+      },
+      {
+        path: '/characters/:id',
+        element: <Detail />,
       },
     ],
   },

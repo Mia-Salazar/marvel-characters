@@ -5,7 +5,7 @@ import { useSearchCharacterQuery } from '../../services/hooks/character';
 import { Card, Search } from '../../components';
 
 import './Home.styled.scss';
-import { findCharacter } from '../../services/character';
+import { findCharacters } from '../../services/character';
 
 const Home = () => {
   const { data, isLoading, error } = useSearchCharacterQuery();
@@ -14,7 +14,7 @@ const Home = () => {
 
   const handleChangeName = async (event) => {
     const name = event.target.value;
-    const filteredCharacters = await findCharacter(name);
+    const filteredCharacters = await findCharacters(name);
     setName(name);
     setCharacters(filteredCharacters);
   };
@@ -32,11 +32,11 @@ const Home = () => {
         onChange={handleChangeName}
         number={characters?.length || 0}
       />
-      <ul className="home__list">
+      <div className="home__list">
         {characters.map(({ name, image, id }) => (
-          <Card name={name} id={id} image={image} key={id} />
+          <Card name={name} id={id} image={image} key={id} isList />
         ))}
-      </ul>
+      </div>
     </main>
   );
 };

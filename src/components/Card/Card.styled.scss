@@ -4,6 +4,40 @@
   height: 245.97px;
   width: 172.5px;
 
+  &--is-single {
+    width: 100%;
+    height: unset;
+
+    .card__button {
+      height: 397.88px;
+    }
+
+    .card__name {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 37.5px;
+    }
+
+    .card__name-container {
+      height: unset;
+      padding: 16px 24px 48px 24px;
+      flex-direction: column;
+    }
+  }
+
+  &__name-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__description {
+    color: $light;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+
   &__container-img {
     display: flex;
     justify-content: center;
@@ -34,6 +68,7 @@
     justify-content: space-between;
     padding: 0 16px;
     align-items: center;
+    overflow: hidden;
 
     &:before {
       position: absolute;
@@ -42,6 +77,16 @@
       height: 5.37px;
       width: 100%;
       background-color: $secondary;
+      content: '';
+    }
+
+    &:after {
+      position: absolute;
+      bottom: -6px;
+      right: -6px;
+      height: 12.85px;
+      width: 12.85px;
+      background-color: $light;
       content: '';
     }
   }

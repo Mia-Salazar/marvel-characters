@@ -1,0 +1,36 @@
+@use '../../assets/variables.scss' as *;
+
+.transformation-card {
+  margin-right: 16px;
+
+  &__img-container {
+    height: 252.78px;
+    width: 168.52px;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 0;
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__title {
+    margin-bottom: 7.52px;
+
+    color: $primary;
+    font-weight: 500;
+    font-size: 15.05px;
+    line-height: 17.63px;
+  }
+
+  &__subtitle {
+    color: $primary;
+    font-weight: 400;
+    font-size: 11.29px;
+    line-height: 13.22px;;
+  }
+}

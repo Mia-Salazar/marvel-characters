@@ -1,0 +1,20 @@
+@use '../../assets/variables.scss' as *;
+
+.detail {
+    margin-top: calc(84px + 24px);
+
+    &__container {
+        padding: 0 16px;
+    }
+
+    &__title {
+        margin-top: 48px;
+        margin-bottom: 24px;
+
+        color: $primary;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28.13px;
+        text-transform: uppercase;
+    }
+}

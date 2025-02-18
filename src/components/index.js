@@ -1,5 +1,5 @@
 import Header from './Header/Header';
-import Card from './Card/Card.view';
+import Card from './Card/Card';
 import FavoriteButton from './FavoriteButton/FavoriteButton';
 import Search from './Search/Search';
 

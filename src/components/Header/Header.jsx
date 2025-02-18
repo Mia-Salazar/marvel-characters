@@ -1,10 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import MarvelImage from '../../assets/marvel.svg';
 
 import './Header.styled.scss';
 import FavoriteButton from '../FavoriteButton/FavoriteButton';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (

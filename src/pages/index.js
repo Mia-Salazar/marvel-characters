@@ -1,3 +1,4 @@
-import Home from './Home/Home.view';
+import Home from './Home/Home';
+import Detail from './Detail/Detail';
 
-export { Home };
+export { Detail, Home };

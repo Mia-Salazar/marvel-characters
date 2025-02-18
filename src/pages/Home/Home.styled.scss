@@ -1,0 +1,26 @@
+.home {
+  padding: 0 16px;
+  margin-top: calc(84px + 24px);
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+
+    max-width: 360px;
+
+    padding: 0;
+    //hedaer + margin
+    margin: 0 auto;
+    list-style-type: none;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.06px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    margin-bottom: calc(12px + 24px);
+  }
+}

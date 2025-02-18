@@ -1,0 +1,20 @@
+@use '../../assets/variables.scss' as *;
+
+.favorite {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+
+  &__img-container{
+    margin: 0;
+  }
+
+  &__favorite-number {
+    color: $light;
+    margin-left: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+}

@@ -1,3 +1,5 @@
 import Header from './Header/Header.view';
+import Card from './Card/Card.view';
+import FavoriteButton from './FavoriteButton/FavoriteButton.view';
 
-export { Header };
+export { Card, Header, FavoriteButton };

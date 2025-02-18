@@ -1,29 +1,34 @@
 import React from 'react';
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from 'react-router-dom';
 import { useState } from 'react';
 
 import { Header } from './components';
+import { Home } from './pages';
 
 import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0);
+const routes = [
+  {
+    path: '/',
+    element: <Home />,
+    children: [
+      {
+        index: true,
+        element: <Navigate to={'/character'} />,
+      },
+    ],
+  },
+];
 
+function App() {
   return (
     <>
       <Header />
-      <div></div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <RouterProvider router={createBrowserRouter(routes)} />
     </>
   );
 }

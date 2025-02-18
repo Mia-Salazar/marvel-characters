@@ -1,0 +1,46 @@
+@use '../../assets/variables.scss' as *;
+
+.search {
+    position: relative;
+
+    &__title {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14.06px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        margin-bottom: calc(12px + 24px);
+    }
+
+    &__label {
+        position: absolute;
+        left: -9999em;
+    }
+
+    &__input-container {
+        display: flex;
+    }
+
+    &__img-container {
+        top: 12px;
+        left: 0;
+        position: absolute;
+        margin: 0;
+    }
+
+    &__input {
+        width: 100%;
+        margin-bottom: 12px;
+        padding: 12px 24px; 
+        border: none;
+        border-bottom: 1px solid $primary;
+
+        &::placeholder {
+            color: #aaa;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18.75px;
+            text-transform: uppercase;
+        }
+    }
+}

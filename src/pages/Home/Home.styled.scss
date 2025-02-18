@@ -1,5 +1,5 @@
 .home {
-  padding: 0 16px;
+  padding: 24px 16px 0 16px;
   margin: calc(84px + 24px) auto 0 auto;
 
   max-width: 360px;
@@ -21,14 +21,5 @@
     @media (min-width: 1512px) {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
-  }
-
-  &__title {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14.06px;
-    letter-spacing: 0%;
-    text-transform: uppercase;
-    margin-bottom: calc(12px + 24px);
   }
 }

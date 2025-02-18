@@ -1,25 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 import { useSearchCharacterQuery } from '../../services/hooks/character';
-import { Card } from '../../components';
+import { Card, Search } from '../../components';
 
 import './Home.styled.scss';
+import { findCharacter } from '../../services/character';
 
 const Home = () => {
-  const [count, setCount] = useState(0);
+  const { data, isLoading, error } = useSearchCharacterQuery();
+  const [characters, setCharacters] = useState([]);
+  const [name, setName] = useState('');
 
-  const characterQuery = useSearchCharacterQuery();
+  const handleChangeName = async (event) => {
+    const name = event.target.value;
+    const filteredCharacters = await findCharacter(name);
+    setName(name);
+    setCharacters(filteredCharacters);
+  };
 
-  console.log(characterQuery.data, 'aaaa');
+  useEffect(() => {
+    if (data) {
+      setCharacters(data.items);
+    }
+  }, [data]);
 
   return (
     <main className="home">
-      <h1 className="home__title">
-        {characterQuery.data?.items.length} Results
-      </h1>
+      <Search
+        value={name}
+        onChange={handleChangeName}
+        number={characters?.length || 0}
+      />
       <ul className="home__list">
-        {characterQuery.data?.items.map(({ name, image, id }) => (
+        {characters.map(({ name, image, id }) => (
           <Card name={name} id={id} image={image} key={id} />
         ))}
       </ul>

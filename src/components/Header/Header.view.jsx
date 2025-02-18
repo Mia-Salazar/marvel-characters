@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 
 import MarvelImage from '../../assets/marvel.svg';
-import HeartImage from '../../assets/heart.svg';
 
 import './Header.styled.scss';
 import FavoriteButton from '../FavoriteButton/FavoriteButton.view';

@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 
 import FavoriteButton from '../FavoriteButton/FavoriteButton.view';
 

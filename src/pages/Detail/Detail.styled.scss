@@ -3,7 +3,7 @@
 .detail {
     margin-top: calc(84px + 24px);
 
-    @media (min-width: 1100px) {
+    @media (min-width: 834px) {
         margin-top: 84px;
     }
 
@@ -21,8 +21,14 @@
         line-height: 28.13px;
         text-transform: uppercase;
 
-        @media (min-width: 1100px) {
-            padding-left: 48px;
+        @media (min-width: 834px) {
+            padding-left: 32px;
+        }
+
+        @media (min-width: 1512px) {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 37.5px;
         }
     }
 }

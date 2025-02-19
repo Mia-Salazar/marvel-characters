@@ -1,6 +1,7 @@
 import React from 'react';
 
-import HeartImage from '../../assets/heart.svg';
+import HeartFull from '../../assets/heart.svg';
+import HeartEmpty from '../../assets/heart-light.svg';
 
 import './FavoriteButton.styled.scss';
 
@@ -14,7 +15,7 @@ const FavoriteButton = ({ hasNumber, isList }) => {
             : 'favorite__img-container'
         }
       >
-        <img alt="" src={HeartImage} className="favorite__img" />
+        <img alt="" src={HeartEmpty} className="favorite__img" />
       </figure>
       {hasNumber && <span className="favorite__favorite-number">0</span>}
     </button>

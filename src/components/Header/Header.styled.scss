@@ -3,6 +3,7 @@
 .header {
   position: fixed;
   top: 0;
+  z-index: 1;
 
   display: flex;
   align-items: center;
@@ -13,7 +14,7 @@
   padding: 16px;
   background-color: $primary;
 
-  @media (min-width: 1100px) {
+  @media (min-width: 834px) {
     padding: 16px 48px;
   }
 

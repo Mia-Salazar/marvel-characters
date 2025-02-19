@@ -6,6 +6,7 @@ import Search from '../Search/Search';
 import './CardList.styled.scss';
 
 const CardList = ({ characters, name, onChangeName, isFavorite }) => {
+  console.log(characters, 'aaaa');
   return (
     <div className="list">
       <Search
@@ -15,7 +16,7 @@ const CardList = ({ characters, name, onChangeName, isFavorite }) => {
         isFavorite={isFavorite}
       />
       <section className="list__container">
-        {characters.map(({ name, image, id, description }) => (
+        {characters?.map(({ name, image, id, description }) => (
           <Card
             name={name}
             id={id}

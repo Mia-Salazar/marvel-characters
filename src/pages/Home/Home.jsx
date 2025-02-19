@@ -8,7 +8,7 @@ import { findCharacters } from '../../services/character';
 import './Home.styled.scss';
 
 const Home = () => {
-  const { data } = useSearchCharacterQuery();
+  const { data, isLoading } = useSearchCharacterQuery();
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState('');
 
@@ -24,6 +24,8 @@ const Home = () => {
       setCharacters(data.items);
     }
   }, [data]);
+
+  if (isLoading) return <p>...Loading</p>;
 
   return (
     <main className="home">

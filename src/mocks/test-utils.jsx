@@ -1,5 +1,5 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render } from '@testing-library/react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 export const createQueryClient = () => {
   return new QueryClient({
@@ -7,8 +7,8 @@ export const createQueryClient = () => {
       queries: {
         retry: false,
         refetchOnWindowFocus: false,
-        staleTime: Infinity, // ⬅️ Evita refetch automático
-        cacheTime: Infinity, // ⬅️ Evita que se eliminen datos mockeados antes de usarse
+        staleTime: Infinity, // Evita que las consultas sean refetch automáticamente
+        cacheTime: Infinity, // Evita que los datos mockeados se eliminen antes de ser usados
       },
     },
   });

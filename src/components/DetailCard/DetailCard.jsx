@@ -18,7 +18,7 @@ const DetailCard = ({ name, description, image, id }) => {
         <div className="card-detail__name-container">
           <div className="card-detail__name-header">
             <h1 className="card-detail__name">{name}</h1>
-            <FavoriteButton />
+            <FavoriteButton item={{ name, description, image, id }} />
           </div>
           {description && (
             <p className="card-detail__description">{description}</p>

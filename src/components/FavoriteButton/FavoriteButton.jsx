@@ -6,16 +6,36 @@ import HeartFull from '../../assets/heart.svg';
 import HeartEmpty from '../../assets/heart-light.svg';
 
 import './FavoriteButton.styled.scss';
+import { Link } from 'react-router-dom';
 
-const FavoriteButton = ({ hasNumber, isList, item }) => {
+const Layout = ({ hasNumber, children, onClick }) => {
+  if (hasNumber)
+    return (
+      <Link to="/favorites" className="favorite">
+        {children}
+      </Link>
+    );
+
+  return (
+    <button className="favorite" onClick={onClick}>
+      {children}
+    </button>
+  );
+};
+
+const FavoriteButton = ({ hasNumber = false, isList, item }) => {
   const { favorites, toggleFavorite } = useFavorites();
   const hasFavorite =
     item?.id && favorites?.some((fav) => fav?.id === item?.id);
 
-  console.log(hasFavorite, item?.id, favorites, 'aaa');
+  const aria = hasNumber
+    ? ''
+    : hasFavorite
+      ? 'Héroe seleccionado'
+      : 'Héroe no seleccionado';
 
   return (
-    <button className="favorite" onClick={() => toggleFavorite(item)}>
+    <Layout onClick={() => toggleFavorite(item)} hasNumber={hasNumber}>
       <figure
         className={
           isList
@@ -24,7 +44,7 @@ const FavoriteButton = ({ hasNumber, isList, item }) => {
         }
       >
         <img
-          alt=""
+          alt={aria}
           src={hasFavorite || hasNumber ? HeartFull : HeartEmpty}
           className="favorite__img"
         />
@@ -32,7 +52,7 @@ const FavoriteButton = ({ hasNumber, isList, item }) => {
       {hasNumber && (
         <span className="favorite__favorite-number">{favorites.length}</span>
       )}
-    </button>
+    </Layout>
   );
 };
 

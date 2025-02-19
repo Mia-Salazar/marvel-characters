@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 import { useSearchCharacterQuery } from '../../services/hooks/character';
-import { Card, Search } from '../../components';
-
-import './Home.styled.scss';
+import { CardList } from '../../components';
 import { findCharacters } from '../../services/character';
 
+import './Home.styled.scss';
+
 const Home = () => {
-  const { data, isLoading, error } = useSearchCharacterQuery();
+  const { data } = useSearchCharacterQuery();
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState('');
 
@@ -27,23 +27,11 @@ const Home = () => {
 
   return (
     <main className="home">
-      <Search
-        value={name}
-        onChange={handleChangeName}
-        number={characters?.length || 0}
+      <CardList
+        characters={characters}
+        name={name}
+        onChangeName={handleChangeName}
       />
-      <div className="home__list">
-        {characters.map(({ name, image, id, description }) => (
-          <Card
-            name={name}
-            id={id}
-            image={image}
-            key={id}
-            description={description}
-            isList
-          />
-        ))}
-      </div>
     </main>
   );
 };

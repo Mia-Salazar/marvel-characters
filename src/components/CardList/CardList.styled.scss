@@ -1,0 +1,19 @@
+.list {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+
+    padding: 0;
+    margin: 0 auto;
+    list-style-type: none;
+
+    @media (min-width: 834px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media (min-width: 1512px) {
+      max-width: calc(1512px - 48px - 48px);
+    }
+  }
+}

@@ -4,7 +4,8 @@ import SearchImage from '../../assets/search.svg';
 
 import './Search.styled.scss';
 
-const Search = ({ number, value, onChange }) => {
+const Search = ({ number, value, onChange, isFavorite }) => {
+  const HeadingType = isFavorite ? 'p' : 'h1';
   return (
     <form className="search">
       <div className="search__input-container">
@@ -24,7 +25,7 @@ const Search = ({ number, value, onChange }) => {
           onChange={(event) => onChange(event)}
         />
       </div>
-      <h1 className="search__title">{number} Results</h1>
+      <HeadingType className="search__title">{number} Results</HeadingType>
     </form>
   );
 };

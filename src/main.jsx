@@ -1,7 +1,8 @@
 import React from 'react';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { ReactQueryProvider } from './ReactQueryProvider.jsx';
+
+import { ReactQueryProvider } from './services/hooks/ReactQueryProvider.jsx';
 
 import App from './App.jsx';
 

@@ -1,13 +1,21 @@
 import React from 'react';
 
+import { useFavorites } from '../../context/FavoritesContext';
+
 import HeartFull from '../../assets/heart.svg';
 import HeartEmpty from '../../assets/heart-light.svg';
 
 import './FavoriteButton.styled.scss';
 
-const FavoriteButton = ({ hasNumber, isList }) => {
+const FavoriteButton = ({ hasNumber, isList, item }) => {
+  const { favorites, toggleFavorite } = useFavorites();
+  const hasFavorite =
+    item?.id && favorites?.some((fav) => fav?.id === item?.id);
+
+  console.log(hasFavorite, item?.id, favorites, 'aaa');
+
   return (
-    <button className="favorite">
+    <button className="favorite" onClick={() => toggleFavorite(item)}>
       <figure
         className={
           isList
@@ -15,9 +23,15 @@ const FavoriteButton = ({ hasNumber, isList }) => {
             : 'favorite__img-container'
         }
       >
-        <img alt="" src={HeartEmpty} className="favorite__img" />
+        <img
+          alt=""
+          src={hasFavorite || hasNumber ? HeartFull : HeartEmpty}
+          className="favorite__img"
+        />
       </figure>
-      {hasNumber && <span className="favorite__favorite-number">0</span>}
+      {hasNumber && (
+        <span className="favorite__favorite-number">{favorites.length}</span>
+      )}
     </button>
   );
 };

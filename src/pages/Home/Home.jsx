@@ -33,8 +33,15 @@ const Home = () => {
         number={characters?.length || 0}
       />
       <div className="home__list">
-        {characters.map(({ name, image, id }) => (
-          <Card name={name} id={id} image={image} key={id} isList />
+        {characters.map(({ name, image, id, description }) => (
+          <Card
+            name={name}
+            id={id}
+            image={image}
+            key={id}
+            description={description}
+            isList
+          />
         ))}
       </div>
     </main>

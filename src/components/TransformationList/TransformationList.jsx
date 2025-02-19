@@ -9,8 +9,6 @@ const TransformationList = (transformations) => {
 
   const orderedList = useTransformations(transformations.transformations);
 
-  console.log(orderedList, 'orderedList');
-
   return (
     <ul className="transformation-list">
       {orderedList.map(({ image, ki, name, id }) => (

@@ -4,8 +4,10 @@ import {
   Navigate,
   Outlet,
 } from 'react-router-dom';
+
 import { Header } from './components';
 import { Detail, Home } from './pages';
+import { FavoritesProvider } from './context/FavoritesContext';
 
 import './App.css';
 
@@ -38,7 +40,11 @@ const routes = [
 ];
 
 function App() {
-  return <RouterProvider router={createBrowserRouter(routes)} />;
+  return (
+    <FavoritesProvider>
+      <RouterProvider router={createBrowserRouter(routes)} />
+    </FavoritesProvider>
+  );
 }
 
 export default App;

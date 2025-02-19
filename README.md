@@ -36,6 +36,7 @@ As the marvel API has been failing, we have proceeded to use the Dragon Ball API
 - MSW: Mock api calls
 
 ## Architecture
+<pre>
 ├───src
 |   main.jsx: the root app
 |   App.css: general styles
@@ -57,3 +58,4 @@ As the marvel API has been failing, we have proceeded to use the Dragon Ball API
 │       ├───Favorites
 │       └───Home
 │   └───services: API calls
+</pre>

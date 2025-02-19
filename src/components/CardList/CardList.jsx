@@ -6,7 +6,6 @@ import Search from '../Search/Search';
 import './CardList.styled.scss';
 
 const CardList = ({ characters, name, onChangeName, isFavorite }) => {
-  console.log(characters, 'aaaa');
   return (
     <div className="list">
       <Search

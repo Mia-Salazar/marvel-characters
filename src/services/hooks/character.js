@@ -3,7 +3,6 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchCharacter } from '../character';
 
 export const useSearchCharacterQuery = () => {
-  console.log('📡 Se está llamando a la API real');
   const query = useQuery({
     queryKey: ['character'],
     queryFn: async () => {

@@ -1,18 +1,12 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import { vi } from 'vitest';
-import Header from '../Header'; // Asegúrate de que la ruta sea correcta
+
+import Header from '../Header';
 import {
   FavoritesContext,
   FavoritesProvider,
-} from '../../../context/FavoritesContext'; // Importa el contexto
-import { MemoryRouter } from 'react-router-dom';
-
-const customRender = (ui, { providerProps, ...renderOptions }) => {
-  return render(
-    <FavoritesProvider {...providerProps}>{ui}</FavoritesProvider>,
-    renderOptions
-  );
-};
+} from '../../../context/FavoritesContext';
 
 describe('Header Component', () => {
   test('show number of favorites when there is nothing in the store', () => {
@@ -30,7 +24,7 @@ describe('Header Component', () => {
 
   test('show number of favorites when there is an element in the store', () => {
     const mockFavorites = [{ id: 1, name: 'Goku' }];
-    const mockToggleFavorite = vi.fn(); // Mock de la función
+    const mockToggleFavorite = vi.fn();
 
     render(
       <MemoryRouter>

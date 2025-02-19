@@ -1,10 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import { vi } from 'vitest';
-import {
-  FavoritesContext,
-  FavoritesProvider,
-} from '../../../context/FavoritesContext'; // Importa el contexto
 import { MemoryRouter } from 'react-router-dom';
+import { render, screen } from '@testing-library/react';
+
+import { FavoritesProvider } from '../../../context/FavoritesContext';
 import Card from '../Card';
 
 describe('Card Component', () => {

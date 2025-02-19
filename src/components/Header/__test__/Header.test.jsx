@@ -23,6 +23,24 @@ test('show number of favorites when there is nothing in the store', () => {
     </MemoryRouter>
   );
 
-  const cardName = screen.getByText(/0/i);
-  expect(cardName).toBeInTheDocument();
+  const favoriteNumber = screen.getByText(/0/i);
+  expect(favoriteNumber).toBeVisible();
+});
+
+test('show number of favorites when there is an element in the store', () => {
+  const mockFavorites = [{ id: 1, name: 'Goku' }];
+  const mockToggleFavorite = vi.fn(); // Mock de la función
+
+  render(
+    <MemoryRouter>
+      <FavoritesContext.Provider
+        value={{ favorites: mockFavorites, toggleFavorite: mockToggleFavorite }}
+      >
+        <Header />
+      </FavoritesContext.Provider>
+    </MemoryRouter>
+  );
+
+  const favoriteNumber = screen.getByText(/1/i);
+  expect(favoriteNumber).toBeVisible();
 });

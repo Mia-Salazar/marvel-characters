@@ -58,4 +58,5 @@ As the marvel API has been failing, we have proceeded to use the Dragon Ball API
 │       ├───Favorites
 │       └───Home
 │   └───services: API calls
+│        └───hooks: react query hooks
 </pre>

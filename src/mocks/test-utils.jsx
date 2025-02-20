@@ -7,8 +7,8 @@ export const createQueryClient = () => {
       queries: {
         retry: false,
         refetchOnWindowFocus: false,
-        staleTime: Infinity, // Evita que las consultas sean refetch automáticamente
-        cacheTime: Infinity, // Evita que los datos mockeados se eliminen antes de ser usados
+        staleTime: Infinity,
+        cacheTime: Infinity,
       },
     },
   });

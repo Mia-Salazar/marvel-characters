@@ -7,6 +7,10 @@
     height: 246px;
     width: 164px;
 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
     @media (min-width: 834px) {
       height: 252.79px;
       width: 168.53px;
@@ -16,10 +20,6 @@
       height: 268.2px;
       width: 179.2px;
     }
-
-    margin: 0;
-    display: flex;
-    justify-content: center;
   }
 
   &__img {

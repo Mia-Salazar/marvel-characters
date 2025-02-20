@@ -1,12 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { fetchCharacter } from '../character';
+import { fetchCharacters } from '../character';
 
 export const useSearchCharacterQuery = () => {
   const query = useQuery({
     queryKey: ['character'],
     queryFn: async () => {
-      const data = await fetchCharacter();
+      const data = await fetchCharacters();
 
       return data;
     },

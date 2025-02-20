@@ -11,12 +11,12 @@ const Detail = () => {
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
-    const fetchCharacter = async () => {
+    const fetchCharacters = async () => {
       const response = await findCharacter(id);
       setCharacter(response);
     };
 
-    fetchCharacter();
+    fetchCharacters();
   }, []);
 
   return (

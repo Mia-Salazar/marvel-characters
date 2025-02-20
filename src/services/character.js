@@ -1,6 +1,6 @@
 const LIMIT = 50;
 
-export const fetchCharacter = async () => {
+export const fetchCharacters = async () => {
   try {
     const response = await fetch(
       `https://dragonball-api.com/api/characters?limit=${LIMIT}`

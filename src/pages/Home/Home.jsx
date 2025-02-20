@@ -26,10 +26,10 @@ const Home = () => {
   };
 
   useEffect(() => {
-    if (data) {
+    if (data && characters.length === 0) {
       setCharacters(data.items);
     }
-  }, [data]);
+  }, [data, characters]);
 
   if (isLoading) return <p>...Loading</p>;
 

@@ -1,0 +1,32 @@
+@use '../../assets/variables.scss' as *;
+
+.favorite {
+  display: flex;
+  align-items: center;
+
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+
+  &__img-container{
+    margin: 0;
+
+    &--is-list {
+      width: 12px;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    max-width: 100%;
+  }
+
+  &__favorite-number {
+    margin-left: 8px;
+    
+    color: $light;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+}

@@ -1,0 +1,24 @@
+@use '../../assets/variables.scss' as *;
+
+.header {
+  height: 84px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $primary;
+
+  @media (min-width: 834px) {
+    padding: 16px 48px;
+  }
+
+  &__img-container{
+    margin: 0;
+  }
+}

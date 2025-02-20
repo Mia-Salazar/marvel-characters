@@ -1,0 +1,14 @@
+.home {
+  max-width: 360px;;
+  margin: calc(84px + 24px) auto 0 auto;
+
+  @media (min-width: 834px) {
+    max-width: calc(834px - 48px - 48px);
+
+    padding-top: 24px;
+  }
+
+  @media (min-width: 1512px) {
+    max-width: calc(1512px - 48px - 48px);
+  }
+}

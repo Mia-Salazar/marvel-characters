@@ -1,0 +1,82 @@
+@use '../../assets/variables.scss' as *;
+
+.card {
+  height: 245.97px;
+  width: 172.5px;
+  position: relative;
+
+  &:before {
+    content: '';
+    height: 5.37px;
+    width: 100%;
+    position: absolute;
+    bottom: 56px;
+    left: 0;
+
+    background-color: $secondary;
+  }
+
+  &__name-header {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container-img {
+    height: inherit;
+
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__button {
+    width: 100%;
+    height: 189.97px;
+
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+  }
+
+  &__name-container {
+    height: 56px;
+    
+    padding: 16px 16px 24px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+    background-color: $primary;
+
+    &:after {
+      content: '';
+      height: 12.85px;
+      width: 12.85px;
+      position: absolute;
+      right: -6px;
+      bottom: -6px;
+      
+      transform: rotate(45deg);
+      background-color: $light;
+    }
+  }
+
+  &__name {
+    margin: 0;
+
+    color: $light;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.41px;
+    text-transform: uppercase;
+  }
+}

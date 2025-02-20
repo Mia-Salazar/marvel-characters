@@ -1,0 +1,137 @@
+@use '../../assets/variables.scss' as *;
+
+.card-detail {
+
+    @media (min-width: 1512px) {
+        display: flex;
+        justify-content: center;
+
+        background-color: $primary;
+    }
+
+
+    &__container {
+        width: 100%;
+        height: unset;
+    
+        @media (min-width: 834px) {
+            height: 278px;
+
+            display: flex;
+        }
+
+        @media (min-width: 1512px) {
+            height: 320px;
+            max-width: 960px;
+        }
+    
+    }
+
+    &__name-header {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__description {
+        margin: 0;
+
+        color: $light;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18.75px;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__container-img {
+        height: 397.88px;
+
+        margin: 0;
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: 834px) {
+            width: 278px;
+            height: 278px;
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__button {
+        padding: 0;
+
+        background-color: transparent;
+        border: none;
+
+        @media (min-width: 834px) {
+            height: 278px;
+        }
+    }
+
+    &__name-container {
+        height: 210px;
+        position: relative;
+
+        padding: 16px 24px 48px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: $primary;
+        overflow: hidden;
+
+        @media (min-width: 834px) {
+            height: 278px;
+
+            padding: 79.5px 48px 48px 48px;
+            justify-content: unset;
+        }
+
+        @media (min-width: 1512px) {
+            padding: 96px 48px 48px 48px;
+        }
+
+        &:after {
+            content: '';
+            height: 24px;
+            width: 24px;
+            position: absolute;
+            bottom: -12px;
+            right: -11px;
+
+            transform: rotate(45deg);  
+            background-color: $light;
+
+            @media (min-width: 1512px) {
+                display: none;
+            }
+        }
+    }
+
+    &__name {
+        margin-bottom: 24px;
+        margin-top: 0;
+
+        color: $light;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 37.5px;
+        text-transform: uppercase;
+
+        @media (min-width: 834px) {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 37.5px;
+        }
+    }
+}

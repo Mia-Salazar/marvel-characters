@@ -3,18 +3,32 @@
 .card {
   height: 245.97px;
   width: 172.5px;
+  position: relative;
+
+  &:before {
+    content: '';
+    height: 5.37px;
+    width: 100%;
+    position: absolute;
+    bottom: 56px;
+    left: 0;
+
+    background-color: $secondary;
+  }
 
   &__name-header {
     width: 100%;
+
     display: flex;
     justify-content: space-between;
   }
 
   &__container-img {
+    height: inherit;
+
+    margin: 0;
     display: flex;
     justify-content: center;
-    margin: 0;
-    height: inherit;
   }
 
   &__img {
@@ -25,6 +39,7 @@
   &__button {
     width: 100%;
     height: 189.97px;
+
     padding: 0;
 
     background-color: transparent;
@@ -32,38 +47,32 @@
   }
 
   &__name-container {
-    position: relative;
-    background-color: $primary;
     height: 56px;
-
+    
+    padding: 16px 16px 24px 16px;
     display: flex;
     justify-content: space-between;
-    padding: 0 16px;
     align-items: center;
-    overflow: hidden;
 
-    &:before {
-      position: absolute;
-      top: -5.37px;
-      left: 0;
-      height: 5.37px;
-      width: 100%;
-      background-color: $secondary;
-      content: '';
-    }
+    overflow: hidden;
+    background-color: $primary;
 
     &:after {
-      position: absolute;
-      bottom: -6px;
-      right: -6px;
+      content: '';
       height: 12.85px;
       width: 12.85px;
+      position: absolute;
+      right: -6px;
+      bottom: -6px;
+      
+      transform: rotate(45deg);
       background-color: $light;
-      content: '';
     }
   }
 
   &__name {
+    margin: 0;
+
     color: $light;
     font-weight: 400;
     font-size: 14px;

@@ -14,8 +14,14 @@ const Home = () => {
 
   const handleChangeName = async (event) => {
     const name = event.target.value;
-    const filteredCharacters = await findCharacters(name);
     setName(name);
+
+    if (name === '') {
+      setCharacters(data.items);
+      return;
+    }
+
+    const filteredCharacters = await findCharacters(name);
     setCharacters(filteredCharacters);
   };
 

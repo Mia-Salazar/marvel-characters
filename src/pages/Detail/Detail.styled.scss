@@ -1,7 +1,7 @@
 @use '../../assets/variables.scss' as *;
 
 .detail {
-    margin-top: calc(84px + 24px);
+    margin-top: 84px;
 
     @media (min-width: 834px) {
         margin-top: 84px;
@@ -9,6 +9,12 @@
 
     &__container {
         padding: 0 16px;
+
+        @media (min-width: 1512px) {
+            max-width: 960px;
+
+            padding: 0;
+        }
     }
 
     &__title {

@@ -1,15 +1,15 @@
-const NUMBER_WORDS = {
-  thousand: 1e3,
-  million: 1e6,
-  billion: 1e9,
-  trillion: 1e12,
-  quadrillion: 1e15,
-  quintillion: 1e18,
-  sextillion: 1e21,
-  septillion: 1e24,
-};
-
 export const useTransformations = (data) => {
+  const NUMBER_WORDS = {
+    thousand: 1e3,
+    million: 1e6,
+    billion: 1e9,
+    trillion: 1e12,
+    quadrillion: 1e15,
+    quintillion: 1e18,
+    sextillion: 1e21,
+    septillion: 1e24,
+  };
+
   function parseNumberString(str) {
     if (typeof str === 'number') return str;
 

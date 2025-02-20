@@ -11,7 +11,7 @@ describe('Search Component', () => {
     render(
       <MemoryRouter>
         <FavoritesProvider>
-          <Search number={1} onChangeName={vi.fn()} value="Goku" />
+          <Search number={1} onChange={vi.fn()} value="Goku" />
         </FavoritesProvider>
       </MemoryRouter>
     );
@@ -19,8 +19,8 @@ describe('Search Component', () => {
     const results = screen.getByText(/1 Results/i);
     expect(results).toBeVisible();
 
-    const input = screen.getByRole('textbox', { name: 'search' });
-    expect(input).toHaveValue(/goku/i);
+    const input = screen.getByRole('textbox');
+    expect(input).toHaveValue('Goku');
   });
 
   test('show change filter name', async () => {
@@ -28,7 +28,7 @@ describe('Search Component', () => {
     render(
       <MemoryRouter>
         <FavoritesProvider>
-          <Search number={1} onChangeName={mockOnChangeName} name="Goku" />
+          <Search number={1} onChange={mockOnChangeName} name="Goku" />
         </FavoritesProvider>
       </MemoryRouter>
     );

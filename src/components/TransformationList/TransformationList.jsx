@@ -8,10 +8,11 @@ const TransformationList = ({ transformations }) => {
     return <p>This character doesn't have transformations</p>;
 
   const orderedList = useTransformations(transformations);
+  const firstElements = orderedList.slice(0, 20);
 
   return (
     <ul className="transformation-list">
-      {orderedList.map(({ image, ki, name, id }) => (
+      {firstElements.map(({ image, ki, name, id }) => (
         <TransformationCard image={image} ki={ki} name={name} key={id} />
       ))}
     </ul>

@@ -33,7 +33,6 @@ As the marvel API has been failing, we have proceeded to use the Dragon Ball API
 - Vitest: For testing
 - React Query: To cache responses
 - Eslint & prettier: Format and linter
-- MSW: Mock api calls
 
 ## Architecture
 <pre>

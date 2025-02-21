@@ -1,7 +1,7 @@
 # Marvel challenge
 
 ## Live
-The web is live [here]()
+The web is live [here](https://67b82af1db490f921d2362d9--upbeat-jepsen-fe697b.netlify.app/)
 
 ## Comands
 To run the application:
@@ -33,7 +33,6 @@ As the marvel API has been failing, we have proceeded to use the Dragon Ball API
 - Vitest: For testing
 - React Query: To cache responses
 - Eslint & prettier: Format and linter
-- MSW: Mock api calls
 
 ## Architecture
 <pre>
@@ -52,7 +51,6 @@ As the marvel API has been failing, we have proceeded to use the Dragon Ball API
 │   │   ├───TransformationCard
 │   │   └───TransformationList
 │   ├───context: global state management with React Context API
-│   ├───mocks: mocks used for testing
 │   └───pages: Pages made with React used for the routes
 │       ├───Detail
 │       ├───Favorites

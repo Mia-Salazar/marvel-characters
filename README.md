@@ -1,7 +1,7 @@
 # Marvel challenge
 
 ## Live
-The web is live [here](https://67b82af1db490f921d2362d9--upbeat-jepsen-fe697b.netlify.app/)
+The web is live [here](https://67b831b2ff66d1ccbfd67cb3--glistening-pastelito-1d2b92.netlify.app/)
 
 ## Comands
 To run the application:

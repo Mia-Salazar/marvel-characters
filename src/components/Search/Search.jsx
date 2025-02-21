@@ -1,6 +1,6 @@
 import React from 'react';
-
-import SearchImage from '../../assets/search.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import './Search.styled.scss';
 
@@ -14,7 +14,7 @@ const Search = ({ number, value, onChange, isFavorite }) => {
             Search a character
           </label>
           <figure className="search__img-container">
-            <img alt="" src={SearchImage} />
+            <FontAwesomeIcon icon={faSearch} size="xs" />
           </figure>
           <input
             className="search__input"

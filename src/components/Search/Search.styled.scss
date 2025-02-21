@@ -18,13 +18,16 @@
     }
 
     &__input-container {
+        position: relative;
+
         display: flex;
+        align-items: baseline;
     }
 
     &__img-container {
         position: absolute;
-        top: 12px;
-        left: 0;
+        top: 0;
+
         margin: 0;
     }
 

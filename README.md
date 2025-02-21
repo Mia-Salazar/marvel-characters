@@ -52,7 +52,6 @@ As the marvel API has been failing, we have proceeded to use the Dragon Ball API
 │   │   ├───TransformationCard
 │   │   └───TransformationList
 │   ├───context: global state management with React Context API
-│   ├───mocks: mocks used for testing
 │   └───pages: Pages made with React used for the routes
 │       ├───Detail
 │       ├───Favorites
